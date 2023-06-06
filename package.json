@@ -1,0 +1,22 @@
+{
+  "name": "@mwpaulsen86/lib-mail",
+  "version": "1.0.0",
+  "description": "Send email by passing in a recipient, subject, and body",
+  "main": "init.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulsenm/lib-mail.git"
+  },
+  "keywords": [
+    "email"
+  ],
+  "author": "Michael Paulsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulsenm/lib-mail/issues"
+  },
+  "homepage": "https://github.com/paulsenm/lib-mail#readme"
+}
