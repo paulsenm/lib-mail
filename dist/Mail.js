@@ -2,7 +2,8 @@ class Mailer {
   constructor() {
     this.emailUrl = "http://diagnostic.lanefi.com/email";
   }
-  async WxMail(recipient, subject, body) {
+  async send(recipient, subject, body) {
+    //return Promise.reject("There was an error sending the message.");
     let data = {
       recipient: recipient,
       subject: subject,
@@ -18,8 +19,15 @@ class Mailer {
         "Content-Type": "application/json"
       }
     });
-    let result = await response.text();
-    console.log(result);
+    // let resp = await Promise.resolve(response.json());
+    // if (resp.success == false){
+    //   throw new Error(resp.message);
+    // }
+    let result = await response.json();
+    if (result.success == false) {
+      throw new Error(result.message);
+    }
+    console.log(result.message);
   }
   async sendWxMail() {
     let recipient = "mwpaulsen86@gmail.com";

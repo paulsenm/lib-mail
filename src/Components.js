@@ -26,7 +26,15 @@ const EmailDraft = function(props){
 
 };
 
+const ErrorMessage = function(props){
+  let errorMessage = props.errorMessage;
+  return (
+    <div>
+      There was an error. {errorMessage}
+    </div>
+  )
+}
 
 
 
-export {EmailDraft};
+export {EmailDraft, ErrorMessage};

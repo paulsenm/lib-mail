@@ -23,4 +23,8 @@ const EmailDraft = function (props) {
     id: "body"
   }, content));
 };
-export { EmailDraft };
+const ErrorMessage = function (props) {
+  let errorMessage = props.errorMessage;
+  return vNode("div", null, "There was an error. ", errorMessage);
+};
+export { EmailDraft, ErrorMessage };
